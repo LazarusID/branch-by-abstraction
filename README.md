@@ -13,3 +13,7 @@ The first step is defining an interface which encapsulates the actions I am inte
 ## Implement Interface
 
 Next I implement the interface, without changing the classes which access the board object.  All my tests are still green and I could push to master without breaking things.
+
+## Partially Transition
+
+I have partially transitions to using the new interface, in the tests for LifeBoard.  The tests for Engine still use the old interface, but everything compiles and I can push to master without causing a riot.
