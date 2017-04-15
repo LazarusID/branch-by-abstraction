@@ -17,8 +17,8 @@ public class EngineTest {
 
     @Before
     public void setUp() {
-        engine = new Engine();
         board = new LifeBoard();
+        engine = new Engine(board);
 
         board.clear();
     }
