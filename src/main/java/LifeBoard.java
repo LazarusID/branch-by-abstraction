@@ -4,8 +4,7 @@
 public class LifeBoard implements Board {
     public static final int X_MAX = 50;
     public static final int Y_MAX = 50;
-    public boolean[][] value = new boolean[X_MAX][Y_MAX];
-
+    private boolean[][] value = new boolean[X_MAX][Y_MAX];
 
     public void clear() {
         for(int x=0; x < X_MAX; ++x) {
