@@ -7,6 +7,6 @@ public interface Board {
 
     public int at(int x, int y);
 
-    public void set(int x, int y);
+    public void set(int x, int y, int value);
 
 }

@@ -9,3 +9,7 @@ In the Initial State I have the implementation of the LifeBoard exposed and refe
 ## Defined Interface
 
 The first step is defining an interface which encapsulates the actions I am interested in.
+
+## Implement Interface
+
+Next I implement the interface, without changing the classes which access the board object.  All my tests are still green and I could push to master without breaking things.
