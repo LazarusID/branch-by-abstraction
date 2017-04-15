@@ -18,9 +18,9 @@ public class EngineTest {
     public void setUp() {
         engine = new Engine();
 
-        for(int x=0; x < board.X_MAX; ++x) {
-            for(int y=0; y < board.Y_MAX; ++y) {
-                board.value[x][y] = false;
+        for(int x = 0; x < LifeBoard.X_MAX; ++x) {
+            for(int y = 0; y < LifeBoard.Y_MAX; ++y) {
+                LifeBoard.value[x][y] = false;
             }
         }
 
@@ -33,7 +33,7 @@ public class EngineTest {
 
     @Test
     public void neighbors_givenOneNeighbor_returnsOne() {
-        board.value[9][9] = true;
+        LifeBoard.value[9][9] = true;
         assertThat(engine.neighbors(X_POINT, Y_POINT), is(1));
     }
 
@@ -42,7 +42,7 @@ public class EngineTest {
         for(int x=-1; x < 2; ++x) {
             for(int y=-1; y < 2; ++y) {
                 if (!(0 == x && 0 == y)) {
-                    board.value[x + X_POINT][y + Y_POINT] = true;
+                    LifeBoard.value[x + X_POINT][y + Y_POINT] = true;
                 }
             }
         }
@@ -51,7 +51,7 @@ public class EngineTest {
 
     @Test
     public void neighbors_givenLiveCell_doesNotCountItself() {
-        board.value[X_POINT][Y_POINT] = true;
+        LifeBoard.value[X_POINT][Y_POINT] = true;
         assertThat(engine.neighbors(X_POINT, Y_POINT), is(0));
     }
 
