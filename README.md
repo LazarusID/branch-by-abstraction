@@ -31,3 +31,7 @@ By passing the LifeBoard to the constructor of the engine,  I'm also removing th
 ## Hide The Board's Implementation
 
 I can now hide the implementation of the board and all tests still pass.  This opens the way to change the actual implementation.
+
+## Implement Aging
+
+Now my new LifeBoard implementation implements an aging feature.  Every time a cell is made "alive" it gets one generation older.  This can be used to change the display to show different colors or intensities.
